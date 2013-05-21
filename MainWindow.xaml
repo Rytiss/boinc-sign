@@ -3,14 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BOINC code sign" Height="438" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" Width="357" UseLayoutRounding="False" SizeToContent="WidthAndHeight">
     <Grid Margin="10" RenderTransformOrigin="0.438,0.503">
-        <TextBox x:Name="tbCodeSignFile" HorizontalAlignment="Left" Height="23" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" IsEnabled="False"/>
-        <Button x:Name="btnBrowseCodeSignFile" Content="..." HorizontalAlignment="Left" Margin="225,27,0,0" VerticalAlignment="Top" Width="24" Click="browseCodeSignFile"/>
+        <TextBox x:Name="tbCodeSignFile" HorizontalAlignment="Left" Height="23" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" IsEnabled="False"/>
+        <Button x:Name="btnBrowseCodeSignFile" Content="..." HorizontalAlignment="Left" Margin="280,27,0,0" VerticalAlignment="Top" Width="24" Click="browseCodeSignFile"/>
         <Label Content="Select code sign file (private)" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <ListBox x:Name="lbSelectedFiles" HorizontalAlignment="Left" Height="127" Margin="0,134,0,0" VerticalAlignment="Top" Width="304"/>
         <Label Content="Select files to sign" HorizontalAlignment="Left" Margin="0,54,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbSignFilename" HorizontalAlignment="Left" Height="23" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" IsEnabled="False"/>
-        <Button x:Name="btnBrowseSignFilename" Content="..." HorizontalAlignment="Left" Margin="225,81,0,0" VerticalAlignment="Top" Width="24" Click="btnBrowseSignFilename_Click"/>
-        <Button x:Name="btnAddFile" Content="Add" HorizontalAlignment="Left" Margin="254,81,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.4,4.455" Click="btnAddFile_Click"/>
+        <TextBox x:Name="tbSignFilename" HorizontalAlignment="Left" Height="23" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" IsEnabled="False"/>
+        <Button x:Name="btnBrowseSignFilename" Content="..." HorizontalAlignment="Left" Margin="280,81,0,0" VerticalAlignment="Top" Width="24" Click="btnBrowseSignFilename_Click"/>
         <Label Content="Selected files" HorizontalAlignment="Left" Margin="0,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,0.385"/>
         <Button x:Name="btnRemoveSelected" Content="Remove selected" HorizontalAlignment="Left" Margin="0,266,0,0" VerticalAlignment="Top" Width="110" Click="btnRemoveSelected_Click"/>
         <Button Content="Generate signatures" HorizontalAlignment="Left" Margin="154,266,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.467,0.5" Height="40" FontWeight="Bold" Click="Button_Click_1"/>

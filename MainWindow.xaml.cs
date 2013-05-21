@@ -39,19 +39,16 @@ namespace boinc_sign {
 
             if (result == true) {
                 tbSignFilename.Text = dlg.FileName;
-            }
-        }
-
-        private void btnAddFile_Click(object sender, RoutedEventArgs e) {
-            if (File.Exists(tbSignFilename.Text)) {
-                if (
-                    (tbSignFilename.Text.Substring(tbSignFilename.Text.Length - 4) != ".sig") ||
-                    (MessageBox.Show("You should not need to code sign \".sig\" files. Are you sure you want to add this file?", "Confirm file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-                   ) {
-                    lbSelectedFiles.Items.Add(tbSignFilename.Text);
+                if (File.Exists(tbSignFilename.Text)) {
+                    if (
+                        (tbSignFilename.Text.Substring(tbSignFilename.Text.Length - 4) != ".sig") ||
+                        (MessageBox.Show("You should not need to code sign \".sig\" files. Are you sure you want to add this file?", "Confirm file", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                       ) {
+                        lbSelectedFiles.Items.Add(tbSignFilename.Text);
+                    }
+                } else {
+                    MessageBox.Show("File does not exist.", null, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-            } else {
-                MessageBoxResult result = MessageBox.Show("File does not exist.", null, MessageBoxButton.OK, MessageBoxImage.Error);   
             }
         }
 
